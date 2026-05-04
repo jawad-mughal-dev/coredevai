@@ -1,0 +1,94 @@
+import Link from "next/link";
+import { Code2, Globe, Globe2, X, Mail } from "lucide-react";
+
+const footerLinks = {
+  Company: [
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Blog", href: "/blog" },
+  ],
+  Services: [
+    { label: "Web Development", href: "/services" },
+    { label: "Mobile Apps", href: "/services" },
+    { label: "UI/UX Design", href: "/services" },
+    { label: "API Development", href: "/services" },
+  ],
+  Contact: [
+    { label: "Get a Quote", href: "/contact" },
+    { label: "hello@coredevai.com", href: "mailto:hello@coredevai.com" },
+    { label: "WhatsApp", href: "https://wa.me/923001234567" },
+  ],
+};
+
+const socialLinks = [
+  { icon: Globe, href: "https://github.com/coredevai", label: "GitHub" },
+  { icon: Globe2, href: "https://linkedin.com/company/coredevai", label: "LinkedIn" },
+  { icon: X, href: "https://twitter.com/coredevai", label: "Twitter" },
+  { icon: Mail, href: "mailto:hello@coredevai.com", label: "Email" },
+];
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border bg-card">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center gap-2 font-bold text-lg mb-4">
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                <Code2 className="w-4 h-4 text-white" />
+              </div>
+              <span className="gradient-text">CoreDevAI</span>
+            </Link>
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs mb-6">
+              We build exceptional digital products — from web apps to mobile solutions — that help businesses grow and thrive in the digital age.
+            </p>
+            <div className="flex gap-3">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Links */}
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h3 className="font-semibold text-foreground mb-4 text-sm">{category}</h3>
+              <ul className="space-y-3">
+                {links.map(({ label, href }) => (
+                  <li key={label}>
+                    <Link
+                      href={href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} CoreDevAI. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
