@@ -5,83 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { featuredPosts, regularPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Insights, tutorials, and case studies from the CoreDevAI engineering team.",
 };
-
-const posts = [
-  {
-    slug: "nextjs-app-router-best-practices",
-    title: "Next.js App Router: Best Practices for Production",
-    description: "A deep dive into structuring large-scale Next.js applications with the App Router — layouts, server components, caching, and performance optimization.",
-    category: "Next.js",
-    author: "Jawad A.",
-    readTime: "8 min read",
-    date: "Apr 28, 2025",
-    gradient: "from-blue-500 to-cyan-400",
-    featured: true,
-  },
-  {
-    slug: "fastapi-vs-express-comparison",
-    title: "FastAPI vs Express.js: Which Should You Choose?",
-    description: "A practical comparison for full-stack developers. Performance benchmarks, DX differences, and when to use each for your next project.",
-    category: "Backend",
-    author: "Bilal R.",
-    readTime: "6 min read",
-    date: "Apr 15, 2025",
-    gradient: "from-green-500 to-teal-400",
-    featured: true,
-  },
-  {
-    slug: "react-native-performance-tips",
-    title: "10 React Native Performance Tips for 2025",
-    description: "From FlashList to Reanimated, here are the techniques we use to ship buttery-smooth React Native apps that feel truly native.",
-    category: "Mobile",
-    author: "Jawad A.",
-    readTime: "7 min read",
-    date: "Apr 5, 2025",
-    gradient: "from-purple-500 to-pink-400",
-    featured: false,
-  },
-  {
-    slug: "building-saas-with-nextjs-stripe",
-    title: "Building a SaaS from Scratch with Next.js + Stripe",
-    description: "Step-by-step guide to building a multi-tenant SaaS with authentication, subscription billing, and a customer portal.",
-    category: "SaaS",
-    author: "Jawad A.",
-    readTime: "12 min read",
-    date: "Mar 22, 2025",
-    gradient: "from-orange-500 to-yellow-400",
-    featured: false,
-  },
-  {
-    slug: "github-actions-cicd-guide",
-    title: "GitHub Actions CI/CD: A Complete Guide for Node.js",
-    description: "Automate testing, building, and deploying your Node.js app to AWS or Vercel using GitHub Actions workflows.",
-    category: "DevOps",
-    author: "Bilal R.",
-    readTime: "9 min read",
-    date: "Mar 10, 2025",
-    gradient: "from-teal-500 to-green-400",
-    featured: false,
-  },
-  {
-    slug: "ai-features-saas-openai",
-    title: "How to Add AI Features to Your SaaS with OpenAI",
-    description: "Practical guide to integrating GPT-4 into a production SaaS — rate limiting, cost management, streaming responses, and UX patterns.",
-    category: "AI",
-    author: "Jawad A.",
-    readTime: "10 min read",
-    date: "Feb 28, 2025",
-    gradient: "from-pink-500 to-rose-400",
-    featured: false,
-  },
-];
-
-const featuredPosts = posts.filter((p) => p.featured);
-const regularPosts = posts.filter((p) => !p.featured);
 
 export default function BlogPage() {
   return (
@@ -143,7 +72,7 @@ export default function BlogPage() {
           {/* All posts */}
           <h2 className="text-xl font-semibold mb-6">All Articles</h2>
           <div className="space-y-4">
-            {regularPosts.map(({ slug, title, description, category, author, readTime, date, gradient }) => (
+            {regularPosts.map(({ slug, title, description, category, readTime, date, gradient }) => (
               <Card key={slug} className="card-hover border-border/60 overflow-hidden group">
                 <div className="flex gap-0">
                   <div className={`w-2 bg-gradient-to-b ${gradient} shrink-0`} />

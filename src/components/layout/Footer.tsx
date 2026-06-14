@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Code2, Globe, Globe2, X, Mail } from "lucide-react";
+import { Globe, Globe2, X, Mail, MessageCircle } from "lucide-react";
+import { Logo } from "@/components/layout/Logo";
 
 const footerLinks = {
   Company: [
@@ -14,18 +15,20 @@ const footerLinks = {
     { label: "UI/UX Design", href: "/services" },
     { label: "API Development", href: "/services" },
   ],
-  Contact: [
-    { label: "Get a Quote", href: "/contact" },
-    { label: "hello@coredevai.com", href: "mailto:hello@coredevai.com" },
-    { label: "WhatsApp", href: "https://wa.me/923001234567" },
-  ],
 };
+
+const contactLinks = [
+  { label: "Get a Quote", href: "/contact", icon: null },
+  { label: "mughaljawaddev@gmail.com", href: "mailto:mughaljawaddev@gmail.com", icon: Mail },
+  { label: "0334 3709700", href: "https://wa.me/923343709700", icon: MessageCircle },
+  { label: "0305 4902143", href: "https://wa.me/923054902143", icon: MessageCircle },
+];
 
 const socialLinks = [
   { icon: Globe, href: "https://github.com/coredevai", label: "GitHub" },
   { icon: Globe2, href: "https://linkedin.com/company/coredevai", label: "LinkedIn" },
   { icon: X, href: "https://twitter.com/coredevai", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@coredevai.com", label: "Email" },
+  { icon: Mail, href: "mailto:mughaljawaddev@gmail.com", label: "Email" },
 ];
 
 export function Footer() {
@@ -35,12 +38,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 font-bold text-lg mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Code2 className="w-4 h-4 text-white" />
-              </div>
-              <span className="gradient-text">CoreDevAI</span>
-            </Link>
+            <Logo className="mb-4" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs mb-6">
               We build exceptional digital products — from web apps to mobile solutions — that help businesses grow and thrive in the digital age.
             </p>
@@ -78,6 +76,28 @@ export function Footer() {
               </ul>
             </div>
           ))}
+
+          {/* Contact */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4 text-sm">Contact</h3>
+            <ul className="space-y-3">
+              {contactLinks.map(({ label, href, icon: Icon }) => {
+                return (
+                  <li key={label}>
+                    <Link
+                      href={href}
+                      target={href.startsWith("http") ? "_blank" : undefined}
+                      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors break-all"
+                    >
+                      {Icon && <Icon className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />}
+                      <span>{label}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom */}

@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { Logo } from "@/components/layout/Logo";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -44,12 +45,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-bold text-lg group">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center group-hover:scale-105 transition-transform">
-              <Code2 className="w-4 h-4 text-white" />
-            </div>
-            <span className="gradient-text">CoreDevAI</span>
-          </Link>
+          <Logo />
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
