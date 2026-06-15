@@ -30,8 +30,13 @@ const services = [
   "Other",
 ];
 
-const budgets = ["< $1,000", "$1,000 – $5,000", "$5,000 – $15,000", "$15,000 – $50,000", "$50,000+"];
-
+const budgets = [
+  "< Rs. 300,000",
+  "Rs. 300,000 – Rs. 1,500,000",
+  "Rs. 1,500,000 – Rs. 4,500,000",
+  "Rs. 4,500,000 – Rs. 15,000,000",
+  "Rs. 15,000,000+"
+];
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
