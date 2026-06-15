@@ -7,41 +7,41 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export const projects = [
   {
-    title: "SaaSFlow Dashboard",
+    title: "Real Estate Listings Platform",
     description:
-      "A multi-tenant SaaS platform with role-based access control, analytics dashboard, and subscription management built with Next.js and PostgreSQL.",
-    tags: ["Next.js", "PostgreSQL", "Stripe", "Tailwind"],
-    category: "Web App",
+      "A property listing site with map-based search, virtual tour embeds, mortgage calculator, and agent inquiry forms for a real estate agency client.",
+    tags: ["Next.js", "Mapbox", "MongoDB", "Tailwind"],
+    category: "Real Estate",
     color: "from-blue-500 to-cyan-400",
     live: "https://example.com",
     github: "https://github.com",
   },
   {
-    title: "ShopCore E-Commerce",
+    title: "Restaurant Ordering & Reservations",
     description:
-      "A high-performance e-commerce platform with real-time inventory, payment processing, and an admin CMS for a retail brand.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    category: "E-Commerce",
+      "Online ordering and table reservation site for a restaurant chain, with menu management, Stripe checkout, and SMS order confirmations.",
+    tags: ["React", "Node.js", "Stripe", "Tailwind"],
+    category: "Restaurant",
     color: "from-purple-500 to-pink-400",
     live: "https://example.com",
     github: "https://github.com",
   },
   {
-    title: "HealthTrack Mobile App",
+    title: "Fitness Coaching Booking App",
     description:
-      "Cross-platform health & fitness app with wearable integration, AI-powered insights, and social features for 10,000+ active users.",
-    tags: ["React Native", "FastAPI", "Python", "AWS"],
+      "A cross-platform booking app for a personal trainer, with class scheduling, push reminders, and in-app payments for session packages.",
+    tags: ["React Native", "Firebase", "Stripe", "Expo"],
     category: "Mobile App",
     color: "from-green-500 to-teal-400",
     live: "https://example.com",
     github: "https://github.com",
   },
   {
-    title: "AI Content Studio",
+    title: "Personal Portfolio & Resume Site",
     description:
-      "AI-powered content generation platform integrated with GPT-4, featuring team collaboration, version history, and brand voice settings.",
-    tags: ["Next.js", "OpenAI", "Prisma", "Redis"],
-    category: "AI Tool",
+      "An animated personal portfolio for a freelance designer, featuring a project showcase, blog, and downloadable resume with smooth transitions.",
+    tags: ["Next.js", "Framer Motion", "Tailwind", "MDX"],
+    category: "Portfolio",
     color: "from-orange-500 to-yellow-400",
     live: "https://example.com",
     github: "https://github.com",

@@ -6,6 +6,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export const services = [
   {
+    slug: "web-development",
     icon: Globe,
     title: "Web Development",
     description:
@@ -15,6 +16,7 @@ export const services = [
     tags: ["Next.js", "React", "Node.js"],
   },
   {
+    slug: "mobile-apps",
     icon: Smartphone,
     title: "Mobile Apps",
     description:
@@ -24,6 +26,7 @@ export const services = [
     tags: ["React Native", "Expo", "iOS", "Android"],
   },
   {
+    slug: "ui-ux-design",
     icon: Palette,
     title: "UI/UX Design",
     description:
@@ -33,6 +36,7 @@ export const services = [
     tags: ["Figma", "Prototyping", "Design Systems"],
   },
   {
+    slug: "api-development",
     icon: Server,
     title: "Backend & APIs",
     description:
@@ -42,6 +46,7 @@ export const services = [
     tags: ["REST", "GraphQL", "PostgreSQL", "AWS"],
   },
   {
+    slug: "ai-integration",
     icon: Bot,
     title: "AI Integration",
     description:
@@ -51,6 +56,7 @@ export const services = [
     tags: ["OpenAI", "LangChain", "Python", "FastAPI"],
   },
   {
+    slug: "devops-cicd",
     icon: ShieldCheck,
     title: "DevOps & CI/CD",
     description:

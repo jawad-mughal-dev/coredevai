@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Globe, Globe2, X, Mail, MessageCircle } from "lucide-react";
+import { X, Mail, MessageCircle } from "lucide-react";
 import { Logo } from "@/components/layout/Logo";
+import { InstagramIcon, FacebookIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
 
 const footerLinks = {
   Company: [
@@ -10,10 +11,10 @@ const footerLinks = {
     { label: "Blog", href: "/blog" },
   ],
   Services: [
-    { label: "Web Development", href: "/services" },
-    { label: "Mobile Apps", href: "/services" },
-    { label: "UI/UX Design", href: "/services" },
-    { label: "API Development", href: "/services" },
+    { label: "Web Development", href: "/services#web-development" },
+    { label: "Mobile Apps", href: "/services#mobile-apps" },
+    { label: "UI/UX Design", href: "/services#ui-ux-design" },
+    { label: "API Development", href: "/services#api-development" },
   ],
 };
 
@@ -25,9 +26,10 @@ const contactLinks = [
 ];
 
 const socialLinks = [
-  { icon: Globe, href: "https://github.com/coredevai", label: "GitHub" },
-  { icon: Globe2, href: "https://linkedin.com/company/coredevai", label: "LinkedIn" },
-  { icon: X, href: "https://twitter.com/coredevai", label: "Twitter" },
+  { icon: InstagramIcon, href: "https://www.instagram.com/coredevai?utm_source=qr&igsh=MXN6MmNnMDRzOGhpOQ==", label: "Instagram" },
+  { icon: FacebookIcon, href: "https://www.facebook.com/share/1Kc5RiNCf6/", label: "Facebook" },
+  { icon: LinkedinIcon, href: "https://www.linkedin.com/company/coredevai/", label: "LinkedIn" },
+  { icon: X, href: "https://x.com/coredevai", label: "X" },
   { icon: Mail, href: "mailto:mughaljawaddev@gmail.com", label: "Email" },
 ];
 
