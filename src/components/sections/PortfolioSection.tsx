@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ExternalLink, GitFork, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,44 +7,40 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export const projects = [
   {
-    title: "Real Estate Listings Platform",
+    title: "Gymanger",
     description:
-      "A property listing site with map-based search, virtual tour embeds, mortgage calculator, and agent inquiry forms for a real estate agency client.",
-    tags: ["Next.js", "Mapbox", "MongoDB", "Tailwind"],
-    category: "Real Estate",
+      "All-in-one sports facility management SaaS — memberships, bookings, class scheduling, payroll, POS, door access control, and advanced financial reporting for gyms across Pakistan.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
+    category: "SaaS",
+    color: "from-purple-500 to-indigo-400",
+    live: "https://www.gymanger.com",
+  },
+  {
+    title: "Right Way Garage Doors",
+    description:
+      "Full-service website for Northern California's #1 garage door company since 1980 — service pages, product catalogue, showroom locations, online scheduling, and lead capture.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
+    category: "Business",
     color: "from-blue-500 to-cyan-400",
-    live: "https://example.com",
-    github: "https://github.com",
+    live: "https://www.rwgaragedoors.com",
   },
   {
-    title: "Restaurant Ordering & Reservations",
+    title: "MedWing Express",
     description:
-      "Online ordering and table reservation site for a restaurant chain, with menu management, Stripe checkout, and SMS order confirmations.",
-    tags: ["React", "Node.js", "Stripe", "Tailwind"],
-    category: "Restaurant",
-    color: "from-purple-500 to-pink-400",
-    live: "https://example.com",
-    github: "https://github.com",
+      "Corporate website for a global air medical patient transportation company — service pages, quote request flow, and a clean, trust-building design for a healthcare audience.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
+    category: "Healthcare",
+    color: "from-red-500 to-orange-400",
+    live: "https://medwingexpress.com",
   },
   {
-    title: "Fitness Coaching Booking App",
+    title: "Wonders of Heaven PK",
     description:
-      "A cross-platform booking app for a personal trainer, with class scheduling, push reminders, and in-app payments for session packages.",
-    tags: ["React Native", "Firebase", "Stripe", "Expo"],
-    category: "Mobile App",
+      "E-commerce store for a natural hair care and wellness brand — product catalogue, WooCommerce checkout, combos, customer reviews, and newsletter integration.",
+    tags: ["WordPress", "WooCommerce", "PHP", "MySQL"],
+    category: "E-Commerce",
     color: "from-green-500 to-teal-400",
-    live: "https://example.com",
-    github: "https://github.com",
-  },
-  {
-    title: "Personal Portfolio & Resume Site",
-    description:
-      "An animated personal portfolio for a freelance designer, featuring a project showcase, blog, and downloadable resume with smooth transitions.",
-    tags: ["Next.js", "Framer Motion", "Tailwind", "MDX"],
-    category: "Portfolio",
-    color: "from-orange-500 to-yellow-400",
-    live: "https://example.com",
-    github: "https://github.com",
+    live: "https://wondersofheavenpk.com",
   },
 ];
 
@@ -61,7 +57,7 @@ export function PortfolioSection() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map(({ title, description, tags, category, color, live, github }) => (
+          {projects.map(({ title, description, tags, category, color, live }) => (
             <Card
               key={title}
               className="card-hover border-border/60 overflow-hidden group"
@@ -69,15 +65,12 @@ export function PortfolioSection() {
               {/* Image placeholder */}
               <div className={`h-48 bg-gradient-to-br ${color} relative overflow-hidden`}>
                 <div className="absolute inset-0 opacity-20 grid-pattern" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-white/30 text-7xl font-bold tracking-tighter">
+                    {title.split(" ")[0]}
+                  </span>
+                </div>
                 <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-lg bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50 transition-colors"
-                  >
-                    <GitFork className="w-4 h-4" />
-                  </a>
                   <a
                     href={live}
                     target="_blank"

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { ExternalLink, GitFork } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { SectionHeader } from "@/components/shared/SectionHeader";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
@@ -12,76 +11,76 @@ export const metadata: Metadata = {
 
 const allProjects = [
   {
-    title: "Real Estate Listings Platform",
-    description: "Property listing site with map-based search, virtual tour embeds, mortgage calculator, and agent inquiry forms for a real estate agency client.",
-    tags: ["Next.js", "Mapbox", "MongoDB", "Tailwind"],
-    category: "Real Estate",
-    color: "from-blue-500 to-cyan-400",
-    live: "https://example.com",
-    github: "https://github.com",
+    title: "Gymanger",
+    description:
+      "All-in-one sports facility management SaaS — memberships, bookings, class scheduling, payroll, POS, door access control, and advanced financial reporting. Serving 95+ gyms and fitness facilities across Pakistan.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
+    category: "SaaS",
+    color: "from-purple-500 to-indigo-400",
+    live: "https://www.gymanger.com",
   },
   {
-    title: "Restaurant Ordering & Reservations",
-    description: "Online ordering and table reservation site for a restaurant chain, with menu management, Stripe checkout, and SMS order confirmations.",
-    tags: ["React", "Node.js", "Stripe", "Tailwind"],
-    category: "Restaurant",
-    color: "from-purple-500 to-pink-400",
-    live: "https://example.com",
-    github: "https://github.com",
-  },
-  {
-    title: "Fitness Coaching Booking App",
-    description: "Cross-platform booking app for a personal trainer, with class scheduling, push reminders, and in-app payments for session packages.",
-    tags: ["React Native", "Firebase", "Stripe", "Expo"],
-    category: "Mobile",
-    color: "from-green-500 to-teal-400",
-    live: "https://example.com",
-    github: "https://github.com",
-  },
-  {
-    title: "Personal Portfolio & Resume Site",
-    description: "Animated personal portfolio for a freelance designer, featuring a project showcase, blog, and downloadable resume with smooth Framer Motion transitions.",
-    tags: ["Next.js", "Framer Motion", "Tailwind", "MDX"],
-    category: "Portfolio",
-    color: "from-orange-500 to-yellow-400",
-    live: "https://example.com",
-    github: "https://github.com",
-  },
-  {
-    title: "Online Course Marketplace",
-    description: "Marketplace where instructors upload video courses and students enroll and track progress, with quizzes, certificates, and Stripe payouts.",
-    tags: ["Next.js", "PostgreSQL", "Stripe", "AWS S3"],
-    category: "EdTech",
-    color: "from-red-500 to-orange-400",
-    live: "https://example.com",
-    github: "https://github.com",
-  },
-  {
-    title: "Local Business Landing Page & CMS",
-    description: "Marketing site for a small business with an editable CMS, contact form, testimonials, and SEO-optimized service pages.",
-    tags: ["Next.js", "Sanity CMS", "Tailwind", "Vercel"],
+    title: "Right Way Garage Doors",
+    description:
+      "Full-service website for Northern California's #1 garage door company since 1980 — service pages, product catalogue, showroom locations, online scheduling, and lead capture.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
     category: "Business",
-    color: "from-indigo-500 to-purple-400",
-    live: "https://example.com",
-    github: "https://github.com",
+    color: "from-blue-500 to-cyan-400",
+    live: "https://www.rwgaragedoors.com",
   },
   {
-    title: "Crypto Portfolio Tracker",
-    description: "Web app for tracking crypto holdings across wallets and exchanges, with live price feeds, P&L charts, and price alerts.",
-    tags: ["React", "Chart.js", "Node.js", "CoinGecko API"],
-    category: "FinTech",
+    title: "MedWing Express",
+    description:
+      "Corporate website for a global air medical patient transportation company — commercial medical escort services, stretcher services, quote request flow, and a clean trust-building design.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
+    category: "Healthcare",
+    color: "from-red-500 to-orange-400",
+    live: "https://medwingexpress.com",
+  },
+  {
+    title: "Wonders of Heaven PK",
+    description:
+      "E-commerce store for a natural hair care and wellness brand selling organic hair oils, protein shampoos, and detox teas — WooCommerce checkout, product combos, reviews, and newsletter integration.",
+    tags: ["WordPress", "WooCommerce", "PHP", "MySQL"],
+    category: "E-Commerce",
+    color: "from-green-500 to-teal-400",
+    live: "https://wondersofheavenpk.com",
+  },
+  {
+    title: "Lide Legal",
+    description:
+      "Professional law firm website for a Singapore-based legal practice specialising in corporate law, M&A, capital markets, and ESG — practice area pages, team profiles, and lead generation forms.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
+    category: "Legal",
+    color: "from-slate-500 to-gray-400",
+    live: "https://lidelegal.com",
+  },
+  {
+    title: "Mar Pacific Food Services",
+    description:
+      "Corporate website for an LA-based food distribution, 3PL warehousing, and supply chain logistics company — service pages, client portal integration, USDA compliance info, and contact flows.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
+    category: "Logistics",
+    color: "from-orange-500 to-yellow-400",
+    live: "https://x72.7b1.myftpupload.com",
+  },
+  {
+    title: "Krämer Dental",
+    description:
+      "Development website for a German dental products company — clean, professional design with product and service pages tailored for a medical/dental industry audience.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
+    category: "Healthcare",
     color: "from-teal-500 to-green-400",
-    live: "https://example.com",
-    github: "https://github.com",
+    live: "https://entwicklung.kraemerdental.de",
   },
   {
-    title: "Remote Job Board Platform",
-    description: "Job board for remote tech roles with employer dashboards, advanced filtering search, and automated email alerts for new postings.",
-    tags: ["Next.js", "PostgreSQL", "Algolia", "Tailwind"],
-    category: "Job Board",
-    color: "from-pink-500 to-rose-400",
-    live: "https://example.com",
-    github: "https://github.com",
+    title: "Italplastick Windows",
+    description:
+      "Product showcase website for an Italian PVC windows and doors manufacturer — product catalogue, specifications, and inquiry forms for residential and commercial buyers.",
+    tags: ["WordPress", "Elementor", "PHP", "MySQL"],
+    category: "Manufacturing",
+    color: "from-indigo-500 to-purple-400",
+    live: "https://finestre.italplastick.com",
   },
 ];
 
@@ -106,7 +105,7 @@ export default function PortfolioPage() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {allProjects.map(({ title, description, tags, category, color, live, github }) => (
+            {allProjects.map(({ title, description, tags, category, color, live }) => (
               <Card key={title} className="card-hover border-border/60 overflow-hidden group">
                 <div className={`h-52 bg-gradient-to-br ${color} relative overflow-hidden`}>
                   <div className="absolute inset-0 opacity-20 grid-pattern" />
@@ -116,10 +115,6 @@ export default function PortfolioPage() {
                     </span>
                   </div>
                   <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200">
-                    <a href={github} target="_blank" rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-lg bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50">
-                      <GitFork className="w-4 h-4" />
-                    </a>
                     <a href={live} target="_blank" rel="noopener noreferrer"
                       className="w-9 h-9 rounded-lg bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50">
                       <ExternalLink className="w-4 h-4" />
