@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://coredevai.com</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://coredevai.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coredevai.com/services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coredevai.com/portfolio</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coredevai.com/blog</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coredevai.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coredevai.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://coredevai.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://coredevai.com/blog/nextjs-app-router-best-practices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://coredevai.com/blog/fastapi-vs-express-comparison</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://coredevai.com/blog/react-native-performance-tips</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://coredevai.com/blog/building-saas-with-nextjs-stripe</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://coredevai.com/blog/github-actions-cicd-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://coredevai.com/blog/ai-features-saas-openai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
