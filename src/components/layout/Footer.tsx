@@ -20,7 +20,7 @@ const footerLinks = {
 
 const contactLinks = [
   { label: "Get a Quote", href: "/contact", icon: null },
-  { label: "mughaljawaddev@gmail.com", href: "mailto:mughaljawaddev@gmail.com", icon: Mail },
+  { label: "contact@coredevai.com", href: "mailto:contact@coredevai.com", icon: Mail },
   { label: "0334 3709700", href: "https://wa.me/923343709700", icon: MessageCircle },
   { label: "0305 4902143", href: "https://wa.me/923054902143", icon: MessageCircle },
 ];
@@ -30,7 +30,7 @@ const socialLinks = [
   { icon: FacebookIcon, href: "https://www.facebook.com/share/1Kc5RiNCf6/", label: "Facebook" },
   { icon: LinkedinIcon, href: "https://www.linkedin.com/company/coredevai/", label: "LinkedIn" },
   { icon: X, href: "https://x.com/coredevai", label: "X" },
-  { icon: Mail, href: "mailto:mughaljawaddev@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:contact@coredevai.com", label: "Email" },
 ];
 
 export function Footer() {
