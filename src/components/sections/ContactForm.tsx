@@ -48,9 +48,17 @@ export function ContactForm() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
-    // Simulate API call - replace with your actual API endpoint
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Form data:", data);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      const json = await res.json().catch(() => ({}));
+      throw new Error(json.message || "Failed to send message. Please try again.");
+    }
+
     setSubmitted(true);
     reset();
   };

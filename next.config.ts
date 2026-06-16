@@ -2,10 +2,6 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
   turbopack: {
     // Pin the workspace root to this project directory. Without this,
     // Turbopack can mistakenly infer a parent directory as the root
