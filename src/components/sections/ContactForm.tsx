@@ -39,6 +39,7 @@ const budgets = [
 ];
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -48,19 +49,24 @@ export function ContactForm() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    if (!res.ok) {
-      const json = await res.json().catch(() => ({}));
-      throw new Error(json.message || "Failed to send message. Please try again.");
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}));
+        throw new Error(json.message || "Failed to send message. Please try again.");
+      }
+
+      setSubmitted(true);
+      reset();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
     }
-
-    setSubmitted(true);
-    reset();
   };
 
   if (submitted) {
@@ -135,6 +141,12 @@ export function ContactForm() {
         />
         {errors.message && <p className="text-xs text-destructive">{errors.message.message}</p>}
       </div>
+
+      {submitError && (
+        <p className="text-sm text-destructive bg-destructive/10 border border-destructive/20 rounded-lg px-4 py-3">
+          {submitError}
+        </p>
+      )}
 
       <Button type="submit" size="lg" variant="gradient" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? (
