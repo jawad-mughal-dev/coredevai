@@ -14,7 +14,7 @@ const contactInfo = [
     icon: Mail,
     label: "Email",
     value: "contact@coredevai.com",
-    href: "mailto:contact@coredevai.com",
+    href: "https://mail.google.com/mail/?view=cm&to=contact@coredevai.com",
     color: "text-blue-500",
     bg: "bg-blue-500/10",
   },
