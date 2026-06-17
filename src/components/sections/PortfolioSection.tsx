@@ -42,6 +42,42 @@ export const projects = [
     color: "from-green-500 to-teal-400",
     live: "https://wondersofheavenpk.com",
   },
+  {
+    title: "Denka CRM",
+    description:
+      "Customer relationship management system with lead tracking, sales pipeline, analytics dashboard, and team collaboration tools for growing businesses.",
+    tags: ["React", "TypeScript", "Tailwind", "PostgreSQL"],
+    category: "CRM",
+    color: "from-sky-500 to-blue-400",
+    live: "https://denka-crm.netlify.app",
+  },
+  {
+    title: "BA Money Market",
+    description:
+      "Fintech platform for money market investment management — portfolio tracking, transaction history, yield reports, and a secure investor dashboard.",
+    tags: ["React", "TypeScript", "Tailwind", "Node.js"],
+    category: "FinTech",
+    color: "from-cyan-500 to-teal-400",
+    live: "https://ba-money-market.netlify.app",
+  },
+  {
+    title: "SoulMatchh",
+    description:
+      "Dating and matchmaking platform with smart matching, real-time chat, profile creation, and subscription tiers — built for meaningful connections.",
+    tags: ["React", "TypeScript", "Tailwind", "Node.js"],
+    category: "Social",
+    color: "from-pink-500 to-rose-400",
+    live: "https://soulmatchh.netlify.app",
+  },
+  {
+    title: "Ambient Weaving",
+    description:
+      "Experimental interactive installation by ZOZO Labs (Japan) — fashion, ambient computing, and physical textile weaving through immersive digital experiences.",
+    tags: ["React", "Three.js", "WebGL", "TypeScript"],
+    category: "Innovation",
+    color: "from-fuchsia-500 to-pink-400",
+    live: "https://ambientweaving.lab.zozo.jp",
+  },
 ];
 
 export function PortfolioSection() {

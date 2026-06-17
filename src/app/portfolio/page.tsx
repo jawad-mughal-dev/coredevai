@@ -82,6 +82,78 @@ const allProjects = [
     color: "from-indigo-500 to-purple-400",
     live: "https://finestre.italplastick.com",
   },
+  {
+    title: "My Schoom",
+    description:
+      "EdTech SaaS platform for school management — student enrollment, attendance tracking, timetables, grade management, parent portals, and an admin dashboard for institutions.",
+    tags: ["React", "TypeScript", "Tailwind", "Node.js"],
+    category: "EdTech",
+    color: "from-violet-500 to-purple-400",
+    live: "https://my-schoom.vercel.app",
+  },
+  {
+    title: "SoulMatchh",
+    description:
+      "Dating and matchmaking platform with profile creation, smart matching, real-time chat, and subscription tiers — built for meaningful connections.",
+    tags: ["React", "TypeScript", "Tailwind", "Node.js"],
+    category: "Social",
+    color: "from-pink-500 to-rose-400",
+    live: "https://soulmatchh.netlify.app",
+  },
+  {
+    title: "Denka CRM",
+    description:
+      "Customer relationship management system with lead tracking, sales pipeline, activity logs, analytics dashboard, and team collaboration tools for growing businesses.",
+    tags: ["React", "TypeScript", "Tailwind", "PostgreSQL"],
+    category: "CRM",
+    color: "from-sky-500 to-blue-400",
+    live: "https://denka-crm.netlify.app",
+  },
+  {
+    title: "Smart Commerce",
+    description:
+      "Full-featured e-commerce platform with product catalogue, cart, secure checkout, order management, and a merchant dashboard for multi-vendor selling.",
+    tags: ["React", "TypeScript", "Tailwind", "Node.js"],
+    category: "E-Commerce",
+    color: "from-emerald-500 to-green-400",
+    live: "https://smart-commeerce.netlify.app",
+  },
+  {
+    title: "Tikao",
+    description:
+      "Social commerce marketplace connecting buyers and sellers — product listings, reviews, real-time notifications, and a clean mobile-first shopping experience.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Node.js"],
+    category: "Marketplace",
+    color: "from-amber-500 to-orange-400",
+    live: "https://tikao-frontend.vercel.app",
+  },
+  {
+    title: "BA Money Market",
+    description:
+      "Fintech platform for money market investment management — portfolio tracking, transaction history, yield reports, and a secure dashboard for investors.",
+    tags: ["React", "TypeScript", "Tailwind", "Node.js"],
+    category: "FinTech",
+    color: "from-cyan-500 to-teal-400",
+    live: "https://ba-money-market.netlify.app",
+  },
+  {
+    title: "Stenger Bike",
+    description:
+      "Premium German bicycle brand website — product catalogue, model specifications, dealer network locator, and WooCommerce-powered online shop for cycling enthusiasts.",
+    tags: ["WordPress", "WooCommerce", "PHP", "MySQL"],
+    category: "E-Commerce",
+    color: "from-stone-500 to-slate-400",
+    live: "https://stenger-bike.de",
+  },
+  {
+    title: "Ambient Weaving",
+    description:
+      "Experimental interactive installation by ZOZO Labs (Japan) exploring the intersection of fashion, ambient computing, and physical textile weaving through immersive digital experiences.",
+    tags: ["React", "Three.js", "WebGL", "TypeScript"],
+    category: "Innovation",
+    color: "from-fuchsia-500 to-pink-400",
+    live: "https://ambientweaving.lab.zozo.jp",
+  },
 ];
 
 export default function PortfolioPage() {
