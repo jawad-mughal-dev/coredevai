@@ -179,7 +179,7 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {allProjects.map(({ title, description, tags, category, color, live }) => (
               <Card key={title} className="card-hover border-border/60 overflow-hidden group">
-                <div className={`h-52 bg-gradient-to-br ${color} relative overflow-hidden`}>
+                <a href={live} target="_blank" rel="noopener noreferrer" className={`h-52 bg-gradient-to-br ${color} relative overflow-hidden flex cursor-pointer`}>
                   <div className="absolute inset-0 opacity-20 grid-pattern" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-white/30 text-7xl font-bold tracking-tighter">
@@ -187,15 +187,14 @@ export default function PortfolioPage() {
                     </span>
                   </div>
                   <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200">
-                    <a href={live} target="_blank" rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-lg bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50">
+                    <span className="w-9 h-9 rounded-lg bg-black/30 backdrop-blur flex items-center justify-center text-white group-hover:bg-black/50">
                       <ExternalLink className="w-4 h-4" />
-                    </a>
+                    </span>
                   </div>
                   <div className="absolute bottom-4 left-4">
                     <Badge className="bg-white/20 text-white border-white/30 backdrop-blur text-xs">{category}</Badge>
                   </div>
-                </div>
+                </a>
                 <CardHeader className="pb-2">
                   <CardTitle>{title}</CardTitle>
                   <CardDescription className="leading-relaxed">{description}</CardDescription>

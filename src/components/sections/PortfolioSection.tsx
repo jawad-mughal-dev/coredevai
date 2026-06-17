@@ -99,7 +99,7 @@ export function PortfolioSection() {
               className="card-hover border-border/60 overflow-hidden group"
             >
               {/* Image placeholder */}
-              <div className={`h-48 bg-gradient-to-br ${color} relative overflow-hidden`}>
+              <a href={live} target="_blank" rel="noopener noreferrer" className={`h-48 bg-gradient-to-br ${color} relative overflow-hidden flex cursor-pointer`}>
                 <div className="absolute inset-0 opacity-20 grid-pattern" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-white/30 text-7xl font-bold tracking-tighter">
@@ -107,21 +107,16 @@ export function PortfolioSection() {
                   </span>
                 </div>
                 <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <a
-                    href={live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-lg bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50 transition-colors"
-                  >
+                  <span className="w-8 h-8 rounded-lg bg-black/30 backdrop-blur flex items-center justify-center text-white transition-colors">
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </span>
                 </div>
                 <div className="absolute bottom-4 left-4">
                   <Badge className="bg-white/20 text-white border-white/30 text-xs backdrop-blur">
                     {category}
                   </Badge>
                 </div>
-              </div>
+              </a>
               <CardHeader className="pb-3">
                 <CardTitle className="text-lg">{title}</CardTitle>
                 <CardDescription className="text-sm leading-relaxed">{description}</CardDescription>
